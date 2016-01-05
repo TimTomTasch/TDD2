@@ -1,7 +1,11 @@
+from django.core.urlresolvers import resolve
 from django.test import TestCase
+from lists.views import home_page
 
-class SmokeTest (TestCase):
-  def test_BadMath(self):
-    self.assertEqual(1+1,3)
+
+class HomePageTest(TestCase):
+  def test_Resolve(self):
+    found = resolve('/')
+    self.assertEqual(found.func, home_page)
 
 
