@@ -17,6 +17,8 @@ class NewVisitorTest(LiveServerTestCase):
     rows = table.find_elements_by_tag_name('tr')
     self.assertIn(row_text, [row.text for row in rows])
   
+#this is a new comment
+#this too 
   
   def test_can_start_a_list_and_retrieve_it_later(self):
     # Edith has heard about a cool new online to-do app. She goes
